@@ -1,123 +1,158 @@
-# 🛒 Product CRUD API
+🍎 Product CRUD API
 
-A modular, RESTful Product Management API built with **Node.js**, **Express**, and **MongoDB (Mongoose)**. This API allows you to create, retrieve, update, delete, search, and categorize product data efficiently.
+A modular, RESTful Product Management API built with Node.js, Express, and MongoDB (Mongoose). This API allows you to create, retrieve, update, delete, search, and categorize product data efficiently.
 
----
-
-## 📌 Overview
+📌 Overview
 
 This API is designed for e-commerce platforms, inventory systems, or any application requiring structured product data management. It supports full CRUD operations, text search, category listing, and product filtering by category.
 
+🚀 Features
 
-## 🚀 Features
+✅ Create a new product
 
-- ✅ Create a new product  
-- 📥 Get all products  
-- 🔍 Search products by title  
-- 🧾 Get product by ID  
-- ✏️ Update product by ID  
-- 🗑️ Delete product by ID  
-- 🧩 Get all unique categories (with slugs and URLs)  
-- 📂 Filter products by category  
+📥 Get all products
 
+🔍 Search products by title
 
+🧾 Get product by ID
 
-## 🧱 Tech Stack
+✏️ Update product by ID
 
-| Layer      | Technology        |
-|------------|-------------------|
-| Language   | JavaScript (ES6+) |
-| Runtime    | Node.js           |
-| Framework  | Express.js        |
-| Database   | MongoDB           |
-| ODM        | Mongoose          |
+🗑️ Delete product by ID
+
+🧹 Get all unique categories (with slugs and URLs)
+
+📂 Filter products by category
 
 
 
-## 🗂️ Project Structure
+🧱 Tech Stack
 
-- project-root/
-- ├── models/
-- │ └── Product.js # Mongoose schema
-- ├── routes/
-- │ └── productRoutes.js # Express routes
-- ├── server.js # API entry point
-- ├── .env # Environment variables
-- └── package.json
+Layer
+
+Technology
+
+Language
+
+JavaScript (ES6+)
+
+Runtime
+
+Node.js
+
+Framework
+
+Express.js
+
+Database
+
+MongoDB
+
+ODM
+
+Mongoose
 
 
-## 📦 API Documentation
 
-### 1. Create a New Product  
-**POST** `/api/products`
+📂 Project Structure
 
-## json
-- {
-    - "title": "iPhone 15 Pro",
-    - "description": "Latest Apple smartphone",
-    - "price": 1299,
-    - "category": "electronics"
-- }
+project-root/
+├── models/
+│   └── Product.js         # Mongoose schema
+├── routes/
+│   └── productRoutes.js   # Express routes
+├── server.js              # API entry point
+├── .env                   # Environment variables
+└── package.json
 
-- 2. Get All Products
-- GET /api/products
+📦 API Documentation
 
-- 3. Get Product by ID
-- GET /api/products/:_id
+1. Create a New Product
 
-- 4. Update Product by ID
-- PUT /api/products/:_id
+POST /api/products
 
-- 5. Delete Product by ID
-- DELETE /api/products/:_id
+Request Body
 
-- 6. Search Products by Title
-- GET /api/products/search?q=keyword
+{
+  "title": "iPhone 15 Pro",
+  "description": "Latest Apple smartphone",
+  "price": 1299,
+  "category": "electronics"
+}
 
-- 7. Get Formatted Category List
-- GET /api/products/categories
+2. Get All Products
 
-### Response Example:
+GET /api/products
 
-### json
+3. Get Product by ID
 
-- [
-  - {
-     - "slug": "electronics",
-     - "name": "Electronics",
-     - "url": "/products/category/electronics"
-  - }
-- ]
+GET /api/products/:_id
 
-- 8. Get Raw Category List
-- GET /api/products/category-list
+4. Update Product by ID
 
-- 9. Get Products by Category
-- GET /api/products/category/:category
+PUT /api/products/:_id
 
-## ⚙️ Setup Instructions
-### 1. Clone the Repository
+5. Delete Product by ID
 
-- git clone https://github.com/your-username/product-crud-api.git
-- cd product-crud-api
+DELETE /api/products/:_id
 
-### 2. Install Dependencies
-- npm install
+6. Search Products by Title
 
-### 3. Configure Environment Variables
-- Create a .env file and add:
-- MONGO_URI=your_mongo_db_connection_string
+GET /api/products/search?q=keyword
 
-### 4. Start the Server
-- npm start
+7. Get Formatted Category List
 
-#### 🧪 Example Product Schema
-- {
-   - title: String,
-   - description: String,
-   - price: Number,
-   - category: String
-- }
+GET /api/products/categories
 
-## 🤝 Contributing
+Response Example
+
+[
+  {
+    "slug": "electronics",
+    "name": "Electronics",
+    "url": "/products/category/electronics"
+  }
+]
+
+8. Get Raw Category List
+
+GET /api/products/category-list
+
+9. Get Products by Category
+
+GET /api/products/category/:category
+
+⚙️ Setup Instructions
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/product-crud-api.git
+cd product-crud-api
+
+2. Install Dependencies
+
+npm install
+
+3. Configure Environment Variables
+
+Create a .env file and add:
+
+MONGO_URI=your_mongo_db_connection_string
+
+4. Start the Server
+
+npm start
+
+🧺 Example Product Schema
+
+{
+  title: String,
+  description: String,
+  price: Number,
+  category: String
+}
+
+🤝 Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
