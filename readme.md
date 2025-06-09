@@ -1,78 +1,55 @@
-🍎 Product CRUD API
+# 🍎 Product CRUD API
 
-A modular, RESTful Product Management API built with Node.js, Express, and MongoDB (Mongoose). This API allows you to create, retrieve, update, delete, search, and categorize product data efficiently.
+A modular, RESTful Product Management API built with **Node.js**, **Express**, and **MongoDB (Mongoose)**. This API allows you to create, retrieve, update, delete, search, and categorize product data efficiently.
 
-📌 Overview
+---
+
+## 📌 Overview
 
 This API is designed for e-commerce platforms, inventory systems, or any application requiring structured product data management. It supports full CRUD operations, text search, category listing, and product filtering by category.
 
-🚀 Features
+## 🚀 Features
 
-✅ Create a new product
+- ✅ Create a new product  
+- 📥 Get all products  
+- 🔍 Search products by title  
+- 🧾 Get product by ID  
+- ✏️ Update product by ID  
+- 🗑️ Delete product by ID  
+- 🧹 Get all unique categories (with slugs and URLs)  
+- 📂 Filter products by category  
 
-📥 Get all products
+## 🧱 Tech Stack
 
-🔍 Search products by title
+| Layer      | Technology        |
+|------------|-------------------|
+| Language   | JavaScript (ES6+) |
+| Runtime    | Node.js           |
+| Framework  | Express.js        |
+| Database   | MongoDB           |
+| ODM        | Mongoose          |
 
-🧾 Get product by ID
+## 📂 Project Structure
 
-✏️ Update product by ID
-
-🗑️ Delete product by ID
-
-🧹 Get all unique categories (with slugs and URLs)
-
-📂 Filter products by category
-
-
-
-🧱 Tech Stack
-
-Layer
-
-Technology
-
-Language
-
-JavaScript (ES6+)
-
-Runtime
-
-Node.js
-
-Framework
-
-Express.js
-
-Database
-
-MongoDB
-
-ODM
-
-Mongoose
-
-
-
-📂 Project Structure
-
+```
 project-root/
 ├── models/
-│   └── Product.js         # Mongoose schema
+│ └── Product.js # Mongoose schema
 ├── routes/
-│   └── productRoutes.js   # Express routes
-├── server.js              # API entry point
-├── .env                   # Environment variables
+│ └── productRoutes.js # Express routes
+├── server.js # API entry point
+├── .env # Environment variables
 └── package.json
+```
 
-📦 API Documentation
+## 📦 API Documentation
 
-1. Create a New Product
+### 1. Create a New Product  
+**POST** `/api/products`
 
-POST /api/products
+#### Request Body
 
-Request Body
-
+```bash
 {
   "title": "iPhone 15 Pro",
   "description": "Latest Apple smartphone",
@@ -81,31 +58,28 @@ Request Body
 }
 
 2. Get All Products
-
 GET /api/products
 
 3. Get Product by ID
-
 GET /api/products/:_id
 
 4. Update Product by ID
-
 PUT /api/products/:_id
 
 5. Delete Product by ID
-
 DELETE /api/products/:_id
 
 6. Search Products by Title
-
 GET /api/products/search?q=keyword
 
 7. Get Formatted Category List
-
 GET /api/products/categories
 
+ 
 Response Example
-
+json
+Copy
+Edit
 [
   {
     "slug": "electronics",
@@ -113,46 +87,50 @@ Response Example
     "url": "/products/category/electronics"
   }
 ]
-
 8. Get Raw Category List
-
 GET /api/products/category-list
 
 9. Get Products by Category
-
 GET /api/products/category/:category
 
+```
+
+``` bash
 ⚙️ Setup Instructions
-
 1. Clone the Repository
-
+bash
+Copy
+Edit
 git clone https://github.com/your-username/product-crud-api.git
 cd product-crud-api
-
 2. Install Dependencies
-
+bash
+Copy
+Edit
 npm install
-
 3. Configure Environment Variables
-
 Create a .env file and add:
 
+env
+Copy
+Edit
 MONGO_URI=your_mongo_db_connection_string
-
 4. Start the Server
-
+bash
+Copy
+Edit
 npm start
-
 🧺 Example Product Schema
-
+js
+Copy
+Edit
 {
   title: String,
   description: String,
   price: Number,
   category: String
 }
+```
 
-🤝 Contributing
-
+# 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
