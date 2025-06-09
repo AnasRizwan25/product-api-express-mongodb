@@ -54,7 +54,7 @@ Edit
 
 ## 📦 API Documentation
 
-### 1. Create a New Product
+### 1. Create a New Product  
 **POST** `/api/products`
 
 ```json
@@ -113,9 +113,9 @@ Copy
 Edit
 npm install
 3. Configure Environment Variables
-Create a .env file:
+Create a .env file and add:
 
-ini
+env
 Copy
 Edit
 MONGO_URI=your_mongo_db_connection_string
