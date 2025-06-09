@@ -1,4 +1,4 @@
-# 🍎 Product CRUD API
+#  Product CRUD API
 
 A modular, RESTful Product Management API built with **Node.js**, **Express**, and **MongoDB (Mongoose)**. This API allows you to create, retrieve, update, delete, search, and categorize product data efficiently.
 
@@ -10,14 +10,14 @@ This API is designed for e-commerce platforms, inventory systems, or any applica
 
 ## 🚀 Features
 
-- ✅ Create a new product  
-- 📥 Get all products  
-- 🔍 Search products by title  
-- 🧾 Get product by ID  
-- ✏️ Update product by ID  
-- 🗑️ Delete product by ID  
-- 🧹 Get all unique categories (with slugs and URLs)  
-- 📂 Filter products by category  
+-  Create a new product  
+-  Get all products  
+-  Search products by title  
+-  Get product by ID  
+-  Update product by ID  
+-  Delete product by ID  
+-  Get all unique categories (with slugs and URLs)  
+-  Filter products by category  
 
 ## 🧱 Tech Stack
 
