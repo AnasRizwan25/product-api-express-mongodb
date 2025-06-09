@@ -44,12 +44,12 @@ project-root/
 
 ## 📦 API Documentation
 
+```bash
 ### 1. Create a New Product  
 **POST** `/api/products`
 
 #### Request Body
 
-```bash
 {
   "title": "iPhone 15 Pro",
   "description": "Latest Apple smartphone",
@@ -77,9 +77,6 @@ GET /api/products/categories
 
  
 Response Example
-json
-Copy
-Edit
 [
   {
     "slug": "electronics",
@@ -98,32 +95,19 @@ GET /api/products/category/:category
 ``` bash
 ⚙️ Setup Instructions
 1. Clone the Repository
-bash
-Copy
-Edit
 git clone https://github.com/your-username/product-crud-api.git
 cd product-crud-api
+
 2. Install Dependencies
-bash
-Copy
-Edit
 npm install
+
 3. Configure Environment Variables
 Create a .env file and add:
-
-env
-Copy
-Edit
 MONGO_URI=your_mongo_db_connection_string
+
 4. Start the Server
-bash
-Copy
-Edit
 npm start
 🧺 Example Product Schema
-js
-Copy
-Edit
 {
   title: String,
   description: String,
